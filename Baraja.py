@@ -8,5 +8,21 @@ def creaBaraja():
             baraja.append(numero+palo)
     return baraja
 
-creaBaraja()
 
+def intercambio(primerV,segundoB):
+    aux = primerV
+    primerV = segundoB
+    segundoB = aux
+
+def barajar(lista_de_naipes):
+    for i in range (len(lista_de_naipes)):
+            nueva_pos = random.randrange(len(lista_de_naipes))
+            """
+            Intercambio de cartas,tecnica vaso vacio
+            """
+            aux= lista_de_naipes[nueva_pos]
+            lista_de_naipes[nueva_pos] = lista_de_naipes[i]
+            lista_de_naipes [i] = aux
+    return lista_de_naipes
+
+print (creaBaraja())
